@@ -25,7 +25,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     
     * Usa o **VirtualDOM** em vez de RealDOM, considerando as manipulações do RealDOM caras.
     * Suporte **server-side rendering**.
-    * Seguidores "Unidirecional** fluxo de dados ou data binding.
+    * Seguidores **Unidirecional** fluxo de dados ou data binding.
     * Usa **reusable/composable** UI de componentes para desenvolvimento da view.
     
 3. ### O que é JSX?
