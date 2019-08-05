@@ -21,6 +21,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 |12 | [Qual a diferença entre estado e props?](#qual-a-diferença-entre-estado-e-props) |
 |13 | [Por que não devemos atualizar o estado diretamente?](#por-que-não-devemos-atualizar-o-estado-diretamente) |
 |14 | [Qual é o proposito da função callback como um argumento de setState()?](#qual-é-o-proposito-da-função-callback-como-um-argumento-de-setstate) |
+|15 | [Qual a diferença entre tratamento de eventos em HTML e React?](#qual-a-diferença-entre-tratamento-de-eventos-em-html-e-react) |
 
 
 ## Core React
@@ -232,3 +233,33 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     ```javascript
     setState({ name: 'Pedro' }, () => console.log('O nome é atualizado e o componente re-renderizado'))
     ```
+
+15. ### Qual a diferença entre tratamento de eventos em HTML e React?
+    
+    1. No HTML, o evento deve ser declarado em *lowercase*:
+
+    ```html
+    <button onclick='activateLasers()'>
+    ```
+
+    Enquanto no React o mesmo é a convenção *camelCase*:
+
+    ```jsx harmony
+    <button onClick={activateLasers}>
+    ```
+
+    2. No HTML, você pode retornar `false` para prevenir prevent default:
+
+    ```html
+    <a href='#' onclick='console.log("Este link foi clicado."); return false;' />
+    ```
+
+    Enquanto isso no React você deve chamar o `preventDefault()` explicitamente:
+
+    ```javascript
+    function handleClick(event) {
+      event.preventDefault()
+      console.log('Este link foi clicado.')
+    }
+    ```
+
