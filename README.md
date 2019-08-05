@@ -9,7 +9,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 |   | **Core React** |
 |1  | [O que é React?](#o-que-é-react) |
 |2  | [Quais são os principais recursos do React?](#quais-são-os-principais-recursos-do-react) |
-|3  | [O que é JSX?](#o-que-e-jsx) |
+|3  | [O que é JSX?](#o-que-é-jsx) |
 |4  | [Qual a diferença entre um Elemento e um Componente?](#qual-a-diferença-entre-um-elemento-e-um-componente) |
 |5  | [Como criar um componente em React?](#como-criar-um-componente-em-react)
 
