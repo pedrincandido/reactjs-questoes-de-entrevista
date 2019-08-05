@@ -11,7 +11,8 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 |2  | [Quais são os principais recursos do React?](#quais-são-os-principais-recursos-do-react) |
 |3  | [O que é JSX?](#o-que-é-jsx) |
 |4  | [Qual a diferença entre um Elemento e um Componente?](#qual-a-diferença-entre-um-elemento-e-um-componente) |
-|5  | [Como criar um componente em React?](#como-criar-um-componente-em-react)
+|5  | [Como criar um componente em React?](#como-criar-um-componente-em-react) |
+|6  | [Quando usar uma componente de classe e um componente de função?](#quando-usar-um-componente-em-react) |
 
 ## Core React
 
@@ -98,6 +99,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     ```
     
 5. ### Como criar um componente em React?
+
     Existe duas maneiras possíveis para criar um componente.
     
     1. **Function Components:** Isto é um jeito simples de criar um componente. Essas são funções puras de JavaScript ela aceita props objetos como seu primeiro parâmetro e retorna React elementos:
@@ -117,5 +119,26 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
         }
         ```
 
-6. ### Quando usar uma componente de classe e um componente de função? 
-    Se o seu componente precisa de um estado ou de um ciclo de vida então use componente classe, de outra forma use a componente função.
+6. ### Quando usar um component de classe e um component de função?
+
+    Se o seu component precisar de um estado ou de um ciclo de vida então use component classe, de outra forma use a component função.
+
+7. ### O que são components puros?
+
+     É uma das maneiras mais significativas de otimizar os aplicativos React. O uso de pure component fornece um aumento considerável no desemepnho pois reduz o número de operações de renderização no aplicativo. *`React.PureComponent`* é exatamente o mesmo de *`React.Component` exceto pelo fato de lidar com o `shouldComponentUpdate()` para você. Nós devemos sempre tentar fazer o nosso estado o mais simples póssivel e minimizar o número de estado do component.
+
+8. ### Qual a diferença entre um component e um PureComponent?
+      A principal diferença entre um Component e um PureComponent é que o PureComponent modifica a forma em que o diff é feito no processo de renderização, basicamente, a verificação de dados pro update do componente é feita no modo shallow.
+
+      ![pure](images/pure.jpg)
+
+      Isto significa que: Em uma comparação de não-objetos (array, primitive, type, etc) o conteúdo é que é utilizado como item para comparação enquanto que, quando você compara objetos, apenas a referência é verificada.
+
+      Principalmente por conta dessa shallow comparison é o que uso de PureComponent pode incrementar a perfomance da sua aplicação na renderização de components.
+
+9. ### Quando usar um PureComponent?
+      1. State/Props devem ser imutáveis
+      2. State/Props não devem ter uma hierarquia
+      3. Você deve controlar quando o dado muda através de umforceUpdate()
+         ou dispatch de actions
+      4. Os filhos desse component devem ser puros
