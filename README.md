@@ -130,7 +130,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 8. ### Qual a diferença entre um component e um PureComponent?
       A principal diferença entre um Component e um PureComponent é que o PureComponent modifica a forma em que o diff é feito no processo de renderização, basicamente, a verificação de dados pro update do componente é feita no modo shallow.
 
-      ![pure](images/pure.jpg)
+      ![pure](images/pure.gif)
 
       Isto significa que: Em uma comparação de não-objetos (array, primitive, type, etc) o conteúdo é que é utilizado como item para comparação enquanto que, quando você compara objetos, apenas a referência é verificada.
 
