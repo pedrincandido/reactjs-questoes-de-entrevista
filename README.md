@@ -98,7 +98,6 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     ```
     
 5. ### Como criar um componente em React?
-    
     Existe duas maneiras possíveis para criar um componente.
     
     1. **Function Components:** Isto é um jeito simples de criar um componente. Essas são funções puras de JavaScript ela aceita props objetos como seu primeiro parâmetro e retorna React elementos:
@@ -117,3 +116,6 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
            }
         }
         ```
+
+6. ### Quando usar uma componente de classe e um componente de função? 
+    Se o seu componente precisa de um estado ou de um ciclo de vida então use componente classe, de outra forma use a componente função.
