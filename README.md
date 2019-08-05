@@ -29,12 +29,14 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     * Usa **reusable/composable** UI de componentes para desenvolvimento da view.
     
 3. ### O que é JSX?
-    *JSX* é uma extensão de sintaxe do ECMAScript (o acrônimo significa *JavaScript XML*). Basicamente ele nós da expressividade de JavaScript junto com o HTML como sintaxe de template. Este exemplo abaixo pode lembrar uma linguagem de template, mas vem com todo o poder do JavaScript. Lembrando que o JSX não é obrigatório para utilizar o React.
-    
+
     ```jsx harmony
     const element = <h1>Hello, world!</h1>;
     ```
-    Neste exemplo abaixo o texto dentro da tag `<h1>` retorna como uma função Javascript para a função render.
+
+    Esta sintaxe estranha de tags não é uma string, nem HTML. É chamada *JSX* é uma extensão de sintaxe do ECMAScript (o acrônimo significa *JavaScript XML*). Basicamente ele nós da expressividade de JavaScript junto com o HTML como sintaxe de template. O exemplo abaixo pode lembrar uma linguagem de template, mas vem com todo o poder do JavaScript. Lembrando que o JSX não é obrigatório para utilizar o React.
+    
+    Neste exemplo o texto dentro da tag `<h1>` retorna como uma função Javascript para a função render.
     
     ```jsx harmony
     class App extends React.Component {
@@ -47,6 +49,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
       }
     }
     ```
+    
 4. ### Qual a diferença entre um Elemento e um Componente?
     Um *Elemento* é um objeto simples que descreve o que você quer que apareça na tela. Um elemento pode conter outros elementos, criar um elemento é barato. Uma vez que o elemento é criado, ele nunca é alterado.
     
