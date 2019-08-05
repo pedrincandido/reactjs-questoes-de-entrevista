@@ -34,7 +34,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     const element = <h1>Hello, world!</h1>;
     ```
 
-    Esta sintaxe estranha de tags não é uma string, nem HTML. É chamada *JSX* é uma extensão de sintaxe do ECMAScript (o acrônimo significa *JavaScript XML*). Basicamente ele nós da expressividade de JavaScript junto com o HTML como sintaxe de template. O exemplo abaixo pode lembrar uma linguagem de template, mas vem com todo o poder do JavaScript. Lembrando que o JSX não é obrigatório para utilizar o React.
+    Esta sintaxe estranha de tags não é uma string, nem HTML, é chamada *JSX* uma extensão de sintaxe do ECMAScript (o acrônimo significa *JavaScript XML*). Basicamente ele nós da expressividade de JavaScript junto com o HTML como sintaxe de template. O exemplo abaixo pode lembrar uma linguagem de template, mas vem com todo o poder do JavaScript. Lembrando que o JSX não é obrigatório para utilizar o React.
     
     Neste exemplo o texto dentro da tag `<h1>` retorna como uma função Javascript para a função render.
     
@@ -49,7 +49,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
       }
     }
     ```
-    
+
 4. ### Qual a diferença entre um Elemento e um Componente?
     Um *Elemento* é um objeto simples que descreve o que você quer que apareça na tela. Um elemento pode conter outros elementos, criar um elemento é barato. Uma vez que o elemento é criado, ele nunca é alterado.
     
