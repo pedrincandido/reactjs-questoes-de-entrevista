@@ -16,7 +16,10 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 |7  | [ O que são components puros?](#o-que-são-components-puros) |
 |8  | [Qual a diferença entre um component e um PureComponent?](#qual-a-diferença-entre-um-component-e-um-purecomponent) |
 |9 | [Quando usar um PureComponent?](#quando-usar-um-purecomponent) |
-|9 | [O que é estado em React?](#o-que-é-estado-em-react) |
+|10 | [O que é estado em React?](#o-que-é-estado-em-react) |
+|11 | [O que é props in React?](#o-que-é-props-in-react) |
+|12 | [Qual a diferença entre estado e props?](#qual-a-diferença-entre-estado-e-props) |
+
 
 ## Core React
 
@@ -196,4 +199,6 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     props.reactProp
     ```
 
-    10. ### Qual a diferença entre estado e props?
+12. ### Qual a diferença entre estado e props?
+
+    Ambos *props* e *estado* são objetos simples em JavaScript. Enquanto ambos possuem informações que influenciam a saída e renderização, eles são diferentes nas funcionalidades com respeito ao component. Props são passados para o component semelhante aos parâmetros passados em funções, enquanto que o estado é gerenciado com o componente semelhante as variavéis declaradas em funções.
