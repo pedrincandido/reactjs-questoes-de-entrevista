@@ -16,6 +16,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 |7  | [ O que são components puros?](#o-que-são-components-puros) |
 |8  | [Qual a diferença entre um component e um PureComponent?](#qual-a-diferença-entre-um-component-e-um-purecomponent) |
 |9 | [Quando usar um PureComponent?](#quando-usar-um-purecomponent) |
+|9 | [O que é estado em React?](#o-que-é-estado-em-react) |
 
 ## Core React
 
@@ -145,3 +146,54 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
       3. Você deve controlar quando o dado muda através de umforceUpdate()
          ou dispatch de actions
       4. Os filhos desse component devem ser puros
+
+10. ### O que é estado em React?
+
+      *Estado* do component é um objeto que segura algumas informações que pode mudar ao longo do ciclo de vida de um component. Devemos sempre tentar fazer nosso estado o mais simples possível e minimizar o numero de component com estado. Agora vamos criar um user component com uma message de estado
+
+      ```jsx harmony
+      class User extends React.Component {
+        constructor(props) {
+          super(props)
+
+          this.state = {
+            message: 'Bem vindo ao mundo Reativo!!'
+          }
+        }
+
+        render() {
+          return (
+            <div>
+              <h1>{this.state.message}</h1>
+            </div>
+          )
+        }
+      }
+      ```
+
+      ![state](images/state.jpg)
+
+      Estado é similar a props, mas ele é privado e totalmente controlado pelo component. i.e, não é acessível a nenhum component que não seja o que o possui e o define. 
+  
+11. ### O que é props in React?
+
+    *Props* são a entrada para component. Eles são valores únicos ou objetos que contêm um conjunto de valores que são transmitidos aos components na criação usando uma convenção de nomenclatura semelhante aos atributos de HTML-tag. Eles são dados passados de um component pai para um component filho.
+
+    O primeiro próposito de uma props no React é para fornecer a seguinte funcionalidade ao component:
+    1. Passar custom data para o seu component.
+    2. Desencadear mudanças no estado.
+    3. usar atráves da `this.props.reactProp` dentro do component's `render()` método.
+
+    Para este exemplo, vamos criar um elemento com `reactProp` propriedade: 
+
+    ```jsx harmony
+    <Element reactProp={'1'} />
+    ```
+
+    Este `reactProp` nome (ou qualquer coisa que você criou) torna-se uma propriedade anexada ao objeto props nativo do react que originalmente já existe em todos os componets criado usando a biblioteca React.
+
+    ```
+    props.reactProp
+    ```
+
+    10. ### Qual a diferença entre estado e props?
