@@ -22,6 +22,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 |13 | [Por que não devemos atualizar o estado diretamente?](#por-que-não-devemos-atualizar-o-estado-diretamente) |
 |14 | [Qual é o proposito da função callback como um argumento de setState()?](#qual-é-o-proposito-da-função-callback-como-um-argumento-de-setstate) |
 |15 | [Qual a diferença entre tratamento de eventos em HTML e React?](#qual-a-diferença-entre-tratamento-de-eventos-em-html-e-react) |
+|15 | [Como ligar o metodo ou event handlers em JSX callbacks?](#como-liga-o-metodo-ou-event-handlers-em-jsx-callbacks) |
 
 
 ## Core React
