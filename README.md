@@ -236,19 +236,19 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 
 15. ### Qual a diferença entre tratamento de eventos em HTML e React?
     
-    1. No HTML, o evento deve ser declarado em *lowercase*:
+    1. No HTML o evento deve ser declarado em *lowercase*:
 
     ```html
     <button onclick='activateLasers()'>
     ```
 
-    Enquanto no React o mesmo é a convenção *camelCase*:
+    Enquanto no React o mesmo é usando a convenção *camelCase*:
 
     ```jsx harmony
     <button onClick={activateLasers}>
     ```
 
-    2. No HTML, você pode retornar `false` para prevenir prevent default:
+    2. No HTML você pode retornar `false` para prevenir o prevent default:
 
     ```html
     <a href='#' onclick='console.log("Este link foi clicado."); return false;' />
@@ -263,3 +263,45 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     }
     ```
 
+16. ### Como ligar o metodo ou event handlers em JSX callbacks?
+
+    Você tem 3 possiveis maneiras de fazer isso:
+
+    1. **Ligar no construtor:** Em JavaScript classes, os métodos não estão vinculados por padrão. A mesma coisa aplica-se para os event handlers no React definido como as classes métodos. Normalmente devemos ligar o construtor.
+
+    ```javascript
+    class Component extends React.Componenet {
+      constructor(props) {
+        super(props)
+        this.handleClick = this.handleClick.bind(this)
+      }
+
+      handleClick() {
+        // ...
+      }
+    }
+    ```
+
+    2.  **Public class campos sintaxe** Se você não gosta de usar a abordagem bind então *public class campos sintaxe** pode ser usado para vincular callbacks(retornos de chamadas) corretamente
+
+    ```jsx harmony
+    handleClick = () => {
+      console.log('isto é:', this)
+    }
+    ```
+
+    ```jsx harmony
+    <button onClick={this.handleClick}>
+      {'Click me'}
+    </button>
+    ```
+
+    3. **Arrow functions em callbacks(retorno de chamadas):** Você pode usar *arrow functions* diretamente em callbacks(retornos de chamadas).
+    
+    ```jsx harmony
+    <button onClick={(event) => this.handleClick(event)}>
+      {'Click me'}
+    </button>
+    ```
+
+    **Nota:** Se o callback(retorno de chamada) é passado como propriedade para o component filho, esse component pode fazer um extra renderização. Nesses casos, é preferível usar a abordagem `.bind()` ou **public class campos sintaxe**  considerando a performance e o desempenho.
