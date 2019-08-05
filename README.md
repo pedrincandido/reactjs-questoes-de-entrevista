@@ -12,7 +12,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 |3  | [O que é JSX?](#o-que-é-jsx) |
 |4  | [Qual a diferença entre um Elemento e um Component?](#qual-a-diferença-entre-um-elemento-e-um-component) |
 |5  | [Como criar um component em React?](#como-criar-um-component-em-react) |
-|6  | [Quando usar um component de classe e um component de função?](#quando-usar-um-componente-de-classe-e-um-component-de-função) |
+|6  | [Quando usar um component de classe e um component de função?](#quando-usar-um-component-de-classe-e-um-component-de-função) |
 |7  | [ O que são components puros?](#o-que-são-components-puros) |
 |8  | [Qual a diferença entre um component e um PureComponent?](#qual-a-diferença-entre-um-component-e-um-purecomponent) |
 |9 | [Quando usar um PureComponent?](#quando-usar-um-purecomponent) |
