@@ -10,9 +10,12 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 |1  | [O que é React?](#o-que-é-react) |
 |2  | [Quais são os principais recursos do React?](#quais-são-os-principais-recursos-do-react) |
 |3  | [O que é JSX?](#o-que-é-jsx) |
-|4  | [Qual a diferença entre um Elemento e um Componente?](#qual-a-diferença-entre-um-elemento-e-um-componente) |
-|5  | [Como criar um componente em React?](#como-criar-um-componente-em-react) |
-|6  | [Quando usar uma componente de classe e um componente de função?](#quando-usar-um-componente-em-react) |
+|4  | [Qual a diferença entre um Elemento e um Component?](#qual-a-diferença-entre-um-elemento-e-um-component) |
+|5  | [Como criar um component em React?](#como-criar-um-component-em-react) |
+|6  | [Quando usar um component de classe e um component de função?](#quando-usar-um-componente-de-classe-e-um-component-de-função) |
+|7  | [ O que são components puros?](#o-que-são-components-puros) |
+|8  | [Qual a diferença entre um component e um PureComponent?](#qual-a-diferença-entre-um-component-e-um-purecomponent) |
+|9 | [Quando usar um PureComponent?](#quando-usar-um-purecomponent) |
 
 ## Core React
 
@@ -51,7 +54,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     }
     ```
 
-4. ### Qual a diferença entre um Elemento e um Componente?
+4. ### Qual a diferença entre um Elemento e um Component?
     Um *Elemento* é um objeto simples que descreve o que você quer que apareça na tela. Um elemento pode conter outros elementos, criar um elemento é barato. Uma vez que o elemento é criado, ele nunca é alterado.
     
     A representação de um React Element objeto seria a seguinte: 
@@ -98,18 +101,18 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     )
     ```
     
-5. ### Como criar um componente em React?
+5. ### Como criar um component em React?
 
-    Existe duas maneiras possíveis para criar um componente.
+    Existe duas maneiras possíveis para criar um component.
     
-    1. **Function Components:** Isto é um jeito simples de criar um componente. Essas são funções puras de JavaScript ela aceita props objetos como seu primeiro parâmetro e retorna React elementos:
+    1. **Function Components:** Isto é um jeito simples de criar um component. Essas são funções puras de JavaScript ela aceita props objetos como seu primeiro parâmetro e retorna React elementos:
     
         ```jsx harmony
         function Greeting({ message }) {
             return <h1>{`Olá, ${message}`}</h1>
         }
         ```
-    2. **Class Components:** Além disso você pode usar classes do ES6 para definir seu componente. Uma função componente pode ser escrita assim:
+    2. **Class Components:** Além disso você pode usar classes do ES6 para definir seu component. Uma função component pode ser escrita assim:
      
         ```jsx harmony
         class Greeting extends React.Component {
