@@ -19,6 +19,8 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 |10 | [O que é estado em React?](#o-que-é-estado-em-react) |
 |11 | [O que é props in React?](#o-que-é-props-in-react) |
 |12 | [Qual a diferença entre estado e props?](#qual-a-diferença-entre-estado-e-props) |
+|13 | [Por que não devemos atualizar o estado diretamente?](#por-que-não-devemos-atualizar-o-estado-diretamente) |
+|14 | [Qual é o proposito da função callback como um argumento de setState()?](#qual-é-o-proposito-da-função-callback-como-um-argumento-de-setstate) |
 
 
 ## Core React
@@ -202,3 +204,31 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 12. ### Qual a diferença entre estado e props?
 
     Ambos *props* e *estado* são objetos simples em JavaScript. Enquanto ambos possuem informações que influenciam a saída e renderização, eles são diferentes nas funcionalidades com respeito ao component. Props são passados para o component semelhante aos parâmetros passados em funções, enquanto que o estado é gerenciado com o componente semelhante as variavéis declaradas em funções.
+
+13. ### Por que não devemos atualizar o estado diretamente?
+
+    Se você tentar atualizar o estado diretamente então não vai re-render o component. 
+
+    ```javascript
+    ///Errado
+    this.state.message = 'Olá mundo!'
+    ```
+
+    Em vez disso, use o método `setState()`. Ele agenda uma atualização para o objeto de estado de um component. Quando o estado muda, o component responde por re-renderização.
+
+    ```javascript
+    //Correto
+    this.setState({ message: 'Olá mundo!!' })
+    ```
+    
+    **Nota:** Você pode atribuir diretamente ao objeto de estado em um *construtor* ou usando a sintaxe de declaração de campo de classe javascript mais recente.
+
+14. ### Qual é o proposito da função callback como um argumento de `setState()`?
+
+    A função callback(retorno de função) é invocada quando o setState é concluído e o component é renderizado. Como a função `setState()` é **assíncrona** o callback(retorno de função) é usada para continuar a execução do código após uma operação **assíncrona** terminar. 
+
+    **Nota** É recomendado usar o método de ciclo de vida em vez de função callback.
+
+    ```javascript
+    setState({ name: 'Pedro' }, () => console.log('O nome é atualizado e o componente re-renderizado'))
+    ```
