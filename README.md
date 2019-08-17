@@ -209,7 +209,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 
 13. ### Por que não devemos atualizar o estado diretamente?
 
-    Se você tentar atualizar o estado diretamente então não vai re-render o component. 
+    Se você tentar atualizar o estado diretamente então não vai  re-renderizar o component. 
 
     ```javascript
     ///Errado
