@@ -268,7 +268,9 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 
     Você tem 3 possiveis maneiras de fazer isso:
 
-    1. **Ligar no construtor:** Em JavaScript classes, os métodos não estão vinculados por padrão. A mesma coisa aplica-se para os event handlers no React definido como as classes métodos. Normalmente devemos ligar o construtor.
+    Com createReactClass(), isso não é necessário por que ele faz bind de todos os métodos, sem ES6.
+
+    1. **Ligar no construtor:** Em JavaScript classes ES6, os métodos seguem a mesma semântica que classes E6S regulares, não estão vinculados por padrão. Isso significa que elas não fazem o bind do ``this`` da istância. Você terá que explicitamente usar ``.bind(this)``. A mesma coisa aplica-se para os event handlers no React definido como as classes métodos. Normalmente devemos ligar o construtor.
 
     ```javascript
     class Component extends React.Componenet {
@@ -283,13 +285,16 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     }
     ```
 
-    2.  **Public class fields syntax** Se você não gosta de usar a abordagem bind então * public class fields syntax,** pode ser usado para vincular callbacks(retornos de chamadas) corretamente
+    2.  **Public class fields syntax** Se você não gosta de usar a abordagem bind no constructor então **public class fields syntax** pode ser usado para vincular callbacks(retornos de chamadas) corretamente.
 
+     ``AVISO: essa sintaxe é experimental!``
+      ``Usar uma arrow function aqui já faz bind do método``
     ```jsx harmony
     handleClick = () => {
       console.log('isto é:', this)
     }
     ```
+     **Nota:**: A sintaxe acima é ``experimental`` que a sintaxe pode mudar.
 
     ```jsx harmony
     <button onClick={this.handleClick}>
