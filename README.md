@@ -63,7 +63,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     ```
 
 4. ### Qual a diferença entre um Elemento e um Component?
-    Um *Elemento* é um objeto simples que descreve o que você quer que apareça na tela. Um elemento pode conter outros elementos, criar um elemento é barato. Uma vez que o elemento é criado, ele nunca é alterado.
+    Um *Elemento* é um objeto simples que descreve o que você quer que apareça na tela. Criar um elemento é barato, um elemento pode conter outros elementos, e umma vez que o elemento é criado, ele nunca é alterado.
     
     A representação de um React Element objeto seria a seguinte: 
     
@@ -92,7 +92,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     <div id='login-btn'>Login</div>
     ```
     
-    Enquanto um **componente** pode ser declarado de várias maneiras diferentes. Pode ser uma classe com um método `render()`. Outra alternativa, em um simples caso, você pode definir uma função. Em qualquer um dos casos, ele usa props como entrada e retorna um JSX como saída:
+    Enquanto que um **componente** pode ser declaro de várias manerias diferentes. Podendo ser uma classe com um método `render()`. Em um simples caso, uma outra alternativa, você pode definir uma função. Em qualquer um dos casos, ele usa props como entrada e retorna um JSX como saída:
     
      ```javascript
     const Button = ({ onLogin }) =>
@@ -132,11 +132,11 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 
 6. ### Quando usar um component de classe e um component de função?
 
-    Se o seu component precisar de um estado ou de um ciclo de vida então use component classe, de outra forma use a component função.
+    Se o seu component precisar de um estado ou de um ciclo de vida então use component class, de outra forma use a component função.
 
 7. ### O que são components puros?
 
-     É uma das maneiras mais significativas de otimizar os aplicativos React. O uso de pure component fornece um aumento considerável no desemepnho pois reduz o número de operações de renderização no aplicativo. *`React.PureComponent`* é exatamente o mesmo de *`React.Component` exceto pelo fato de lidar com o `shouldComponentUpdate()` para você. Nós devemos sempre tentar fazer o nosso estado o mais simples póssivel e minimizar o número de estado do component.
+     É uma das maneiras mais significativas de otimizar os aplicativos React. O uso de pure component fornece um aumento considerável no desempenho pois reduz o número de operações de renderização no aplicativo. *`React.PureComponent`* é exatamente o mesmo de *`React.Component` exceto pelo fato de lidar com o `shouldComponentUpdate()` para você. Nós sempre devemos tentar fazer o nosso estado o mais simples póssivel, minimizando o número de estados do component.
 
 8. ### Qual a diferença entre um component e um PureComponent?
       A principal diferença entre um Component e um PureComponent é que o PureComponent modifica a forma em que o diff é feito no processo de renderização, basicamente, a verificação de dados pro update do componente é feita no modo shallow.
@@ -150,7 +150,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 9. ### Quando usar um PureComponent?
       1. State/Props devem ser imutáveis
       2. State/Props não devem ter uma hierarquia
-      3. Você deve controlar quando o dado muda através de umforceUpdate()
+      3. Você deve controlar quando o dado muda através de forceUpdate()
          ou dispatch de actions
       4. Os filhos desse component devem ser puros
 
@@ -216,7 +216,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     this.state.message = 'Olá mundo!'
     ```
 
-    Em vez disso, use o método `setState()`. Ele agenda uma atualização para o objeto de estado de um component. Quando o estado muda, o component responde por re-renderização.
+    Em vez disso, use o método `setState()`. Ele agenda uma atualização para o objeto de estado de um component. Quando o estado muda, o component responde por fazer uma renderização.
 
     ```javascript
     //Correto
@@ -283,7 +283,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     }
     ```
 
-    2.  **Public class campos sintaxe** Se você não gosta de usar a abordagem bind então *public class campos sintaxe** pode ser usado para vincular callbacks(retornos de chamadas) corretamente
+    2.  **Public class fields syntax** Se você não gosta de usar a abordagem bind então * public class fields syntax,** pode ser usado para vincular callbacks(retornos de chamadas) corretamente
 
     ```jsx harmony
     handleClick = () => {
@@ -305,4 +305,4 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     </button>
     ```
 
-    **Nota:** Se o callback(retorno de chamada) é passado como propriedade para o component filho, esse component pode fazer um extra renderização. Nesses casos, é preferível usar a abordagem `.bind()` ou **public class campos sintaxe**  considerando a performance e o desempenho.
+    **Nota:** Se o callback(retorno de chamada) é passado como propriedade para o component filho, esse component pode fazer um extra renderização. Nesses casos, é preferível usar a abordagem `.bind()` ou **public class fields syntax**, considerando a performance e o desempenho.
