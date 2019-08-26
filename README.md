@@ -311,3 +311,7 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
     ```
 
     **Nota:** Se o callback(retorno de chamada) é passado como propriedade para o component filho, esse component pode fazer um extra renderização. Nesses casos, é preferível usar a abordagem `.bind()` ou **public class fields syntax**, considerando a performance e o desempenho.
+
+17. ### Como passar um parâmetro para um event handler ou callbacks?
+
+    Você pode usar uma *arrow function* 
