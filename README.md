@@ -22,8 +22,8 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 |13 | [Por que não devemos atualizar o estado diretamente?](#por-que-não-devemos-atualizar-o-estado-diretamente) |
 |14 | [Qual é o proposito da função callback como um argumento de setState()?](#qual-é-o-proposito-da-função-callback-como-um-argumento-de-setstate) |
 |15 | [Qual a diferença entre tratamento de eventos em HTML e React?](#qual-a-diferença-entre-tratamento-de-eventos-em-html-e-react) |
-|16 | [Como ligar o metodo ou event handlers em JSX callbacks?](#como-liga-o-metodo-ou-event-handlers-em-jsx-callbacks) |
-
+|16 | [Como ligar o metodo ou event handlers em JSX callbacks?](#como-ligar-o-metodo-ou-event-handlers-em-jsx-callbacks) |
+|16 | [Como passar um parâmetro para um event handler ou callbacks?](#como-passar-um-parâmetro-para-um-event-handler-ou-callbacks) |
 
 ## Core React
 
@@ -314,4 +314,27 @@ Se você gostou desse projeto, faça um Pull Request será de muita ajuda :].
 
 17. ### Como passar um parâmetro para um event handler ou callbacks?
 
-    Você pode usar uma *arrow function* 
+    Você pode usar uma *arrow function* para envolver um "event handler" e passar parâmetros:
+
+    ```jsx harmony
+    <button onClick={() => this.handleClick(id)} />
+    ```
+
+    Isto é equivalente a chamar `.bind`:
+
+    ```jsx harmony
+    <button onClick={this.handleClick.bind(this, id)} />
+    ```
+    Além destes dessas duas abordagens, você também pode passar um argumentos para uma função que é definida como array function
+    ```jsx harmony
+    <button onClick={this.handleClick(id)} />
+    handleClick = (id) => () => {
+        console.log("Hello, your ticket number is", id)
+    };
+    ```
+
+16. ### O que são eventos sintéticos no React?
+
+  `SyntheticEvent` é um wrapper entre navegadores em torno do evento nativo do navegador. Sua API é igual ao evento nativo do navegador, incluindo `stopPropagation()` e `preventDefault()`, exceto que os eventos funcionam de forma idêntica em todos os navegadores.
+
+
